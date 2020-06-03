@@ -1,0 +1,4 @@
+include ':base'
+include ':app2'
+include ':app'
+rootProject.name = "Android"

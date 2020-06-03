@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/taskId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="4dp"
+        android:textColor="#ff0000"
+        android:textSize="16sp"
+        tools:text="taskId: 78" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/standardE"
+                style="@style/BaseButton"
+                android:text="Jump Standard E" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/standardF"
+                style="@style/BaseButton"
+                android:text="Jump Standard F" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/singleTaskX"
+                style="@style/BaseButton"
+                android:text="Jump SingleTask X" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/singleTaskY"
+                style="@style/BaseButton"
+                android:text="Jump SingleTask Y" />
+
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

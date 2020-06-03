@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/taskId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="4dp"
+        android:textColor="#ff0000"
+        android:textSize="16sp"
+        tools:text="taskId: 78" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/taskId">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/standardA"
+                style="@style/BaseButton"
+                android:text="Jump Standard A" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/standardB"
+                style="@style/BaseButton"
+                android:text="Jump Standard B" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/singleTaskC"
+                style="@style/BaseButton"
+                android:text="Jump SingleTask C" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/singleTaskD"
+                style="@style/BaseButton"
+                android:text="Jump SingleTask D" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/singleTop"
+                style="@style/BaseButton"
+                android:text="Jump SingleTop" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/singleInstance"
+                style="@style/BaseButton"
+                android:text="Jump SingleInstance" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/singleTaskY"
+                style="@style/BaseButton"
+                android:text="Jump App2 SingleTask Y" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/newTaskWithDefaultTaskAffinity"
+                style="@style/BaseButton"
+                android:text="Jump Flag newTask with default taskAffinity" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/newTaskWithAnotherTaskAffinity"
+                style="@style/BaseButton"
+                android:text="Jump Flag newTask with another taskAffinity" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/newTaskApp2"
+                style="@style/BaseButton"
+                android:text="Jump App2 NEW TASK" />
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
