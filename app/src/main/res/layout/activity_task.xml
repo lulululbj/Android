@@ -77,6 +77,11 @@
                 style="@style/BaseButton"
                 android:text="Jump App2 NEW TASK" />
 
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/allowTaskReparenting"
+                style="@style/BaseButton"
+                android:text="Jump allowTaskReparenting" />
+
 
         </LinearLayout>
 

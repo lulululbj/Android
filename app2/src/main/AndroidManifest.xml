@@ -9,8 +9,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".SingleTaskActivityX"
-            android:launchMode="singleTop">
+            android:name=".TaskActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -18,10 +17,15 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".SingleTaskActivityX"
+            android:exported="true"
+            android:label="SingleTaskActivityX"
+            android:launchMode="singleTop" />
+        <activity
             android:name=".SingleTaskActivityY"
             android:exported="true"
             android:label="SingleTaskActivityY"
-            android:launchMode="singleTop"/>
+            android:launchMode="singleTop" />
 
         <activity
             android:name=".StandardActivityE"
@@ -31,5 +35,10 @@
             android:name=".StandardActivityF"
             android:exported="true"
             android:label="StandardActivityF" />
+
+        <activity android:name=".AllowTaskReparentingActivity"
+            android:exported="true"
+            android:label="AllowTaskReparentingActivity"
+            android:launchMode="singleTask"/>
     </application>
 </manifest>
