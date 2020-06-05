@@ -39,6 +39,6 @@
         <activity android:name=".AllowTaskReparentingActivity"
             android:exported="true"
             android:label="AllowTaskReparentingActivity"
-            android:launchMode="singleTask"/>
+            android:allowTaskReparenting="true"/>
     </application>
 </manifest>

@@ -56,18 +56,19 @@ open class BaseTaskActivity : BaseLifecycleActivity() {
                 )
             }
             newTaskApp2.setOnClickListener {
-                val intent = Intent().apply {
-                    component =
-                        ComponentName("luyao.android2", "luyao.android2.SingleTaskActivityY")
+                startActivity(Intent().apply {
+                    component = ComponentName("luyao.android2", "luyao.android2.SingleTaskActivityY")
                     addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-                }
-                startActivity(intent)
+                })
+            }
+
+            intentFlag.setOnClickListener {
+                start<StandardActivityA>(Intent.FLAG_ACTIVITY_SINGLE_TOP)
             }
 
             allowTaskReparenting.setOnClickListener {
                 startActivity(Intent().apply {
-                    component =
-                        ComponentName("luyao.android2", "luyao.android2.AllowTaskReparentingActivity")
+                    component = ComponentName("luyao.android2", "luyao.android2.AllowTaskReparentingActivity")
                 })
             }
 
