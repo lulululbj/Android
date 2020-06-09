@@ -1,12 +1,11 @@
-package luyao.android.animate
+package luyao.android.animate.ui
 
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.commit
+import luyao.android.animate.R
 import luyao.android.animate.databinding.FragmentAnimateBinding
-import luyao.android.animate.ui.AnimatedVectorDrawableFragment
-import luyao.android.animate.ui.AnimationDrawableFragment
 import luyao.android.base.viewBindings
 
 /**
@@ -19,7 +18,7 @@ class AnimateFragment : Fragment(R.layout.fragment_animate) {
 
     private val animationDrawableFragment by lazy { AnimationDrawableFragment() }
     private val animatedVectorDrawableFragment by lazy { AnimatedVectorDrawableFragment() }
-
+    private val propertyAnimationFragment by lazy { PropertyAnimationFragment() }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         initListener()
@@ -29,6 +28,7 @@ class AnimateFragment : Fragment(R.layout.fragment_animate) {
         binding.run {
             animateDrawable.setOnClickListener { navigateTo(animationDrawableFragment) }
             animatedVectorDrawable.setOnClickListener { navigateTo(animatedVectorDrawableFragment) }
+            propertyAnimation.setOnClickListener { navigateTo(propertyAnimationFragment) }
         }
     }
 

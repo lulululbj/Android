@@ -3,6 +3,7 @@ package luyao.android.animate
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.commitNow
+import luyao.android.animate.ui.AnimateFragment
 
 class AnimateActivity : AppCompatActivity(R.layout.activity_animate) {
 
@@ -10,7 +11,9 @@ class AnimateActivity : AppCompatActivity(R.layout.activity_animate) {
         super.onCreate(savedInstanceState)
         if (savedInstanceState == null)
             supportFragmentManager.commitNow {
-                replace(R.id.animateMainContainer,AnimateFragment())
+                replace(R.id.animateMainContainer,
+                    AnimateFragment()
+                )
             }
     }
 }

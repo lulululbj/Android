@@ -1,6 +1,7 @@
 package luyao.android
 
 import android.os.Bundle
+import androidx.appcompat.app.AlertDialog
 import luyao.android.activity.StandardActivityA
 import luyao.android.base.BaseLifecycleActivity
 import luyao.android.base.start
@@ -18,6 +19,10 @@ class MainActivity : BaseLifecycleActivity() {
 
     private fun initListener(){
         binding.activity.setOnClickListener { start<StandardActivityA>() }
+
+        binding.dialog.setOnClickListener {
+            AlertDialog.Builder(this).setTitle("Title").setView(R.layout.dialog).show()
+        }
     }
 
 }

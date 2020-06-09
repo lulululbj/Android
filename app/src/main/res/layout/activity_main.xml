@@ -14,6 +14,11 @@
           android:id="@+id/activity"
           style="@style/LongButton"
           android:text="Activity"/>
+
+      <com.google.android.material.button.MaterialButton
+          android:id="@+id/dialog"
+          style="@style/LongButton"
+          android:text="Dialog"/>
   </LinearLayout>
 
 </ScrollView>

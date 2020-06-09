@@ -18,6 +18,11 @@
             style="@style/LongButton"
             android:text="AnimatedVectorDrawable"/>
 
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/propertyAnimation"
+            style="@style/LongButton"
+            android:text="Property animation"/>
+
     </LinearLayout>
 
 </ScrollView>
