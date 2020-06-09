@@ -26,22 +26,22 @@
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/standardE"
-                style="@style/BaseButton"
+                style="@style/LongButton"
                 android:text="Jump Standard E" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/standardF"
-                style="@style/BaseButton"
+                style="@style/LongButton"
                 android:text="Jump Standard F" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/singleTaskX"
-                style="@style/BaseButton"
+                style="@style/LongButton"
                 android:text="Jump SingleTask X" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/singleTaskY"
-                style="@style/BaseButton"
+                style="@style/LongButton"
                 android:text="Jump SingleTask Y" />
 
 

@@ -12,7 +12,6 @@
             android:name=".TaskActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -38,7 +37,6 @@
 
         <activity android:name=".AllowTaskReparentingActivity"
             android:exported="true"
-            android:label="AllowTaskReparentingActivity"
-            android:allowTaskReparenting="true"/>
+            android:label="AllowTaskReparentingActivity"/>
     </application>
 </manifest>

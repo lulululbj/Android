@@ -29,62 +29,62 @@
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/standardA"
-                style="@style/BaseButton"
+                style="@style/LongButton"
                 android:text="Jump Standard A" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/standardB"
-                style="@style/BaseButton"
+                style="@style/LongButton"
                 android:text="Jump Standard B" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/singleTaskC"
-                style="@style/BaseButton"
+                style="@style/LongButton"
                 android:text="Jump SingleTask C" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/singleTaskD"
-                style="@style/BaseButton"
+                style="@style/LongButton"
                 android:text="Jump SingleTask D" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/singleTop"
-                style="@style/BaseButton"
+                style="@style/LongButton"
                 android:text="Jump SingleTop" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/singleInstance"
-                style="@style/BaseButton"
+                style="@style/LongButton"
                 android:text="Jump SingleInstance" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/singleTaskY"
-                style="@style/BaseButton"
+                style="@style/LongButton"
                 android:text="Jump App2 SingleTask Y" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/newTaskWithDefaultTaskAffinity"
-                style="@style/BaseButton"
+                style="@style/LongButton"
                 android:text="Jump Flag newTask with default taskAffinity" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/newTaskWithAnotherTaskAffinity"
-                style="@style/BaseButton"
+                style="@style/LongButton"
                 android:text="Jump Flag newTask with another taskAffinity" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/newTaskApp2"
-                style="@style/BaseButton"
+                style="@style/LongButton"
                 android:text="Jump App2 NEW TASK" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/intentFlag"
-                style="@style/BaseButton"
+                style="@style/LongButton"
                 android:text="Flag Test" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/allowTaskReparenting"
-                style="@style/BaseButton"
+                style="@style/LongButton"
                 android:text="Jump allowTaskReparenting" />
         </LinearLayout>
 

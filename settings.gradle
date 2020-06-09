@@ -1,3 +1,4 @@
+include ':animate'
 include ':base'
 include ':app2'
 include ':app'

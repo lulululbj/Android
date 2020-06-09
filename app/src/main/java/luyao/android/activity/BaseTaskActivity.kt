@@ -15,7 +15,6 @@ open class BaseTaskActivity : BaseLifecycleActivity() {
 
     private val binding by lazy { ActivityTaskBinding.inflate(layoutInflater) }
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
@@ -38,8 +37,7 @@ open class BaseTaskActivity : BaseLifecycleActivity() {
             singleInstance.setOnClickListener { start<SingleInstanceActivity>() }
             singleTaskY.setOnClickListener {
                 val intent = Intent().apply {
-                    component =
-                        ComponentName("luyao.android2", "luyao.android2.SingleTaskActivityY")
+                    component = ComponentName("luyao.android2", "luyao.android2.SingleTaskActivityY")
                 }
                 startActivity(intent)
             }
@@ -50,11 +48,13 @@ open class BaseTaskActivity : BaseLifecycleActivity() {
                     Intent.FLAG_ACTIVITY_NEW_TASK
                 )
             }
+
             newTaskWithAnotherTaskAffinity.setOnClickListener {
                 start<NewTaskWithAnotherTaskAffinityActivity>(
                     Intent.FLAG_ACTIVITY_NEW_TASK
                 )
             }
+
             newTaskApp2.setOnClickListener {
                 startActivity(Intent().apply {
                     component = ComponentName("luyao.android2", "luyao.android2.SingleTaskActivityY")
@@ -71,7 +71,6 @@ open class BaseTaskActivity : BaseLifecycleActivity() {
                     component = ComponentName("luyao.android2", "luyao.android2.AllowTaskReparentingActivity")
                 })
             }
-
         }
     }
 }
