@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.commit
 import luyao.android.animate.R
 import luyao.android.animate.databinding.FragmentAnimateBinding
+import luyao.android.base.start
 import luyao.android.base.viewBindings
 
 /**
@@ -19,6 +20,10 @@ class AnimateFragment : Fragment(R.layout.fragment_animate) {
     private val animationDrawableFragment by lazy { AnimationDrawableFragment() }
     private val animatedVectorDrawableFragment by lazy { AnimatedVectorDrawableFragment() }
     private val propertyAnimationFragment by lazy { PropertyAnimationFragment() }
+    private val crossFadeFragment by lazy { CrossFadeFragment() }
+    private val moveViewFragment by lazy { MoveViewFragment() }
+    private val zoomAnimationFragment by lazy { ZoomAnimationFragment() }
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         initListener()
@@ -29,6 +34,10 @@ class AnimateFragment : Fragment(R.layout.fragment_animate) {
             animateDrawable.setOnClickListener { navigateTo(animationDrawableFragment) }
             animatedVectorDrawable.setOnClickListener { navigateTo(animatedVectorDrawableFragment) }
             propertyAnimation.setOnClickListener { navigateTo(propertyAnimationFragment) }
+            crossFade.setOnClickListener { navigateTo(crossFadeFragment) }
+            cardFlip.setOnClickListener { activity?.start<CardFlipActivity>()}
+            moveView.setOnClickListener { navigateTo(moveViewFragment) }
+            zoomAnimation.setOnClickListener { navigateTo(zoomAnimationFragment) }
         }
     }
 

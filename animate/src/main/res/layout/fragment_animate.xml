@@ -23,6 +23,26 @@
             style="@style/LongButton"
             android:text="Property animation"/>
 
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/crossFade"
+            style="@style/LongButton"
+            android:text="CrossFade"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/cardFlip"
+            style="@style/LongButton"
+            android:text="CardFlip"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/moveView"
+            style="@style/LongButton"
+            android:text="MoveView"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/zoomAnimation"
+            style="@style/LongButton"
+            android:text="Zoom Animation"/>
+
     </LinearLayout>
 
 </ScrollView>

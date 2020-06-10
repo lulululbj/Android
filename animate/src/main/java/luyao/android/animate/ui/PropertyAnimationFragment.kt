@@ -8,7 +8,6 @@ import androidx.fragment.app.Fragment
 import luyao.android.animate.R
 import luyao.android.animate.databinding.FragmentPropertyAnimationBinding
 import luyao.android.base.viewBindings
-import java.security.KeyFactory
 
 /**
  * Created by luyao
@@ -62,13 +61,35 @@ class PropertyAnimationFragment : Fragment(R.layout.fragment_property_animation)
         }
 
         binding.keyFrame.setOnClickListener {
-            val kf0 = Keyframe.ofFloat(0f,0f)
-            val kf1  = Keyframe.ofFloat(0.2f,180f)
-            val kf2 = Keyframe.ofFloat(1f,360f)
-            val pvhRotation = PropertyValuesHolder.ofKeyframe("rotation",kf0,kf1,kf2)
+            val kf0 = Keyframe.ofFloat(0f, 0f)
+            val kf1 = Keyframe.ofFloat(0.2f, 180f)
+            val kf2 = Keyframe.ofFloat(1f, 360f)
+            val pvhRotation = PropertyValuesHolder.ofKeyframe("rotation", kf0, kf1, kf2)
 
-            ObjectAnimator.ofPropertyValuesHolder(binding.animationView,pvhRotation).apply {
+            ObjectAnimator.ofPropertyValuesHolder(binding.animationView, pvhRotation).apply {
                 duration = 2000
+                start()
+            }
+        }
+
+        binding.viewPropertyAnimator.setOnClickListener {
+//            val animX = ObjectAnimator.ofFloat(binding.animationView, "x", 50f)
+//            val animY = ObjectAnimator.ofFloat(binding.animationView, "y", 100f)
+//            AnimatorSet().apply {
+//                playTogether(animX, animY)
+//                start()
+//            }
+
+//            val pvhX = PropertyValuesHolder.ofFloat("x", 50f)
+//            val pvhY = PropertyValuesHolder.ofFloat("y", 100f)
+//            ObjectAnimator.ofPropertyValuesHolder(binding.animationView, pvhX, pvhY).start()
+
+            binding.animationView.animate().x(50f).y(100f).start()
+        }
+
+        binding.xmlAnimation.setOnClickListener {
+            (AnimatorInflater.loadAnimator(context,R.animator.xml_animation) as AnimatorSet).apply {
+                setTarget(binding.animationView)
                 start()
             }
         }

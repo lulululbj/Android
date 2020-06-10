@@ -1,63 +1,86 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:layout_height="match_parent">
 
     <View
         android:id="@+id/animationView"
         android:layout_width="150dp"
         android:layout_height="150dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
         android:layout_margin="10dp"
-        android:background="@color/colorPrimary"/>
+        android:background="@color/colorPrimary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/valueAnimator"
         style="@style/NormalButton"
+        android:layout_marginTop="10dp"
         android:text="ValueAnimator"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/animationView"
-        android:layout_marginTop="10dp"/>
+        app:layout_constraintEnd_toStartOf="@id/objectAnimator"
+        app:layout_constraintTop_toBottomOf="@id/animationView" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/objectAnimator"
         style="@style/NormalButton"
+        android:layout_marginTop="10dp"
         android:text="ObjectAnimator"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/valueAnimator"
-        android:layout_marginTop="10dp"/>
+        app:layout_constraintStart_toEndOf="@id/valueAnimator"
+        app:layout_constraintTop_toBottomOf="@id/animationView"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/animatorSet"
         style="@style/NormalButton"
+        android:layout_marginTop="10dp"
         android:text="AnimatorSet"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/objectAnimator"
-        android:layout_marginTop="10dp"/>
+        app:layout_constraintEnd_toStartOf="@id/stateListAnimator"
+        app:layout_constraintTop_toBottomOf="@id/objectAnimator" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/stateListAnimator"
-        android:stateListAnimator="@xml/animate_scale"
         style="@style/NormalButton"
+        android:layout_marginTop="10dp"
+        android:stateListAnimator="@xml/animate_scale"
         android:text="StateListAnimator"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/animatorSet"
-        android:layout_marginTop="10dp"/>
+        app:layout_constraintStart_toEndOf="@id/animatorSet"
+        app:layout_constraintTop_toBottomOf="@id/objectAnimator"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/keyFrame"
-        android:stateListAnimator="@xml/animate_scale"
         style="@style/NormalButton"
+        android:layout_marginTop="10dp"
+        android:stateListAnimator="@xml/animate_scale"
         android:text="KeyFrame"
+        app:layout_constraintEnd_toStartOf="@id/viewPropertyAnimator"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/stateListAnimator" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/viewPropertyAnimator"
+        style="@style/NormalButton"
+        android:layout_marginTop="10dp"
+        android:stateListAnimator="@xml/animate_scale"
+        android:text="ViewPropertyAnimator"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/stateListAnimator"
-        android:layout_marginTop="10dp"/>
+        app:layout_constraintStart_toEndOf="@id/keyFrame"
+        app:layout_constraintTop_toBottomOf="@id/stateListAnimator" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/xmlAnimation"
+        style="@style/NormalButton"
+        android:layout_marginTop="10dp"
+        android:stateListAnimator="@xml/animate_scale"
+        android:text="Xml Animation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/keyFrame" />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
