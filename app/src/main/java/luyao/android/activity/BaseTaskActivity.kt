@@ -67,9 +67,10 @@ open class BaseTaskActivity : BaseLifecycleActivity() {
             }
 
             allowTaskReparenting.setOnClickListener {
-                startActivity(Intent().apply {
-                    component = ComponentName("luyao.android2", "luyao.android2.AllowTaskReparentingActivity")
-                })
+//                startActivity(Intent().apply {
+//                    component = ComponentName("luyao.android2", "luyao.android2.AllowTaskReparentingActivity")
+//                })
+                start<AllowTaskReparentingActivity>()
             }
         }
     }

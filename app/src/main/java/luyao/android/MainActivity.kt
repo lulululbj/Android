@@ -6,6 +6,7 @@ import luyao.android.activity.StandardActivityA
 import luyao.android.base.BaseLifecycleActivity
 import luyao.android.base.start
 import luyao.android.databinding.ActivityMainBinding
+import luyao.android.navigation.NavigationActivity
 
 class MainActivity : BaseLifecycleActivity() {
 
@@ -17,12 +18,16 @@ class MainActivity : BaseLifecycleActivity() {
         initListener()
     }
 
-    private fun initListener(){
-        binding.activity.setOnClickListener { start<StandardActivityA>() }
+    private fun initListener() {
+        binding.run {
 
-        binding.dialog.setOnClickListener {
-            AlertDialog.Builder(this).setTitle("Title").setView(R.layout.dialog).show()
+            activity.setOnClickListener { start<StandardActivityA>() }
+
+            dialog.setOnClickListener {
+                AlertDialog.Builder(this@MainActivity).setTitle("Title").setView(R.layout.dialog).show()
+            }
+
+            navigation.setOnClickListener { start<NavigationActivity>() }
         }
     }
-
 }

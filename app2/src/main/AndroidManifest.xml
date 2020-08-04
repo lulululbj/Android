@@ -19,12 +19,12 @@
             android:name=".SingleTaskActivityX"
             android:exported="true"
             android:label="SingleTaskActivityX"
-            android:launchMode="singleTop" />
+            android:launchMode="standard" />
         <activity
             android:name=".SingleTaskActivityY"
             android:exported="true"
             android:label="SingleTaskActivityY"
-            android:launchMode="singleTop" />
+            android:launchMode="standard" />
 
         <activity
             android:name=".StandardActivityE"
@@ -35,8 +35,5 @@
             android:exported="true"
             android:label="StandardActivityF" />
 
-        <activity android:name=".AllowTaskReparentingActivity"
-            android:exported="true"
-            android:label="AllowTaskReparentingActivity"/>
     </application>
 </manifest>

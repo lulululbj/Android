@@ -9,6 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity
+            android:name=".navigation.bottomNavigation.BottomNavigationActivity"
+            android:label="@string/title_activity_navigation"></activity>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -16,43 +19,44 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".activity.StandardActivityA"
             android:label="StandActivityA"
-            android:launchMode="standard"/>
-
+            android:launchMode="standard" />
         <activity
             android:name=".activity.StandardActivityB"
             android:label="StandardActivityB"
             android:launchMode="standard" />
-
         <activity
             android:name=".activity.SingleTaskActivityC"
             android:label="SingleTaskActivityC"
             android:launchMode="singleTask" />
-
         <activity
             android:name=".activity.SingleTaskActivityD"
             android:label="SingleTaskActivityD"
             android:launchMode="singleTask" />
-
         <activity
             android:name=".activity.SingleTopActivity"
             android:label="singleTopActivity"
             android:launchMode="singleTop" />
-
         <activity
             android:name=".activity.SingleInstanceActivity"
             android:label="singleInstanceActivity"
             android:launchMode="singleInstance" />
-
-        <activity android:name=".activity.NewTaskWithDefaultTaskAffinityActivity"
-            android:label="NewTaskWithDefaultTaskAffinityActivity"/>
-
-        <activity android:name=".activity.NewTaskWithAnotherTaskAffinityActivity"
+        <activity
+            android:name=".activity.NewTaskWithDefaultTaskAffinityActivity"
+            android:label="NewTaskWithDefaultTaskAffinityActivity" />
+        <activity
+            android:name=".activity.NewTaskWithAnotherTaskAffinityActivity"
             android:label="NewTaskWithAnotherTaskAffinityActivity"
-            android:taskAffinity="luyao.newTask"/>
+            android:taskAffinity="luyao.newTask" />
+        <activity android:name=".navigation.normalNavigation.NormalNavigationActivity"
+            android:label="Normal Navigation"/>
+        <activity android:name=".navigation.NavigationActivity" />
+        <activity android:name=".activity.AllowTaskReparentingActivity"
+            android:label="AllowTaskReparenting"
+            android:taskAffinity="luyao.android2"
+            android:allowTaskReparenting="true"/>
     </application>
 
 </manifest>
