@@ -1,6 +1,6 @@
 package luyao.android.navigation.normalNavigation
 
-import luyao.android.navigaiton.bottomNavigation.dashboard.home.HomeFragment
+import androidx.fragment.app.Fragment
 
-class AnotherFragment : HomeFragment() {
+class AnotherFragment : Fragment() {
 }

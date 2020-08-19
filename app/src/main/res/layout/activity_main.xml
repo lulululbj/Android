@@ -25,6 +25,11 @@
           style="@style/LongButton"
           android:text="Navigation"/>
 
+      <com.google.android.material.button.MaterialButton
+          android:id="@+id/context"
+          style="@style/LongButton"
+          android:text="Context"/>
+
   </LinearLayout>
 
 </ScrollView>
