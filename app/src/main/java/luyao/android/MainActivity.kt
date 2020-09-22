@@ -8,6 +8,7 @@ import luyao.android.base.start
 import luyao.android.context.ContextActivity
 import luyao.android.databinding.ActivityMainBinding
 import luyao.android.navigation.NavigationActivity
+import luyao.android.oom.OomActivity
 
 class MainActivity : BaseLifecycleActivity() {
 
@@ -30,8 +31,8 @@ class MainActivity : BaseLifecycleActivity() {
             }
 
             navigation.setOnClickListener { start<NavigationActivity>() }
-
             context.setOnClickListener { start<ContextActivity>() }
+            oom.setOnClickListener { start<OomActivity>() }
         }
     }
 }

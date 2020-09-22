@@ -30,6 +30,11 @@
           style="@style/LongButton"
           android:text="Context"/>
 
+      <com.google.android.material.button.MaterialButton
+          android:id="@+id/oom"
+          style="@style/LongButton"
+          android:text="OOM"/>
+
   </LinearLayout>
 
 </ScrollView>

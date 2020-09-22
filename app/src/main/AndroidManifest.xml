@@ -61,6 +61,7 @@
             android:allowTaskReparenting="true"/>
         <activity android:name=".context.ContextActivity"
             android:theme="@style/Theme.AppCompat.Light"/>
+        <activity android:name=".oom.OomActivity"/>
 
         <service android:name=".context.ContextService" />
     </application>
