@@ -35,6 +35,11 @@
           style="@style/LongButton"
           android:text="OOM"/>
 
+      <com.google.android.material.button.MaterialButton
+          android:id="@+id/finish"
+          style="@style/LongButton"
+          android:text="Test Finish"/>
+
   </LinearLayout>
 
 </ScrollView>

@@ -62,8 +62,11 @@
         <activity android:name=".context.ContextActivity"
             android:theme="@style/Theme.AppCompat.Light"/>
         <activity android:name=".oom.OomActivity"/>
+        <activity android:name=".finish.FirstActivity"/>
+        <activity android:name=".finish.SecondActivity"/>
 
         <service android:name=".context.ContextService" />
+        <receiver android:name=".context.ContextBroadCastReceiver" />
     </application>
 
 </manifest>

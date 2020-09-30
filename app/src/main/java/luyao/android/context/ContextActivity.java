@@ -1,7 +1,7 @@
 package luyao.android.context;
 
-import android.app.Dialog;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -13,10 +13,16 @@ import luyao.android.R;
 
 public class ContextActivity extends AppCompatActivity {
 
+    private ContextBroadCastReceiver receiver;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_context);
+
+        receiver = new ContextBroadCastReceiver();
+        IntentFilter intentFilter = new IntentFilter("luyao.context");
+        registerReceiver(receiver,intentFilter);
 
         Log.e("context", "getApplication in Activity: " + getApplication().getClass().getName());
         Log.e("context", "getApplicationContext in Activity: " + getApplicationContext().getClass().getName());
@@ -25,9 +31,8 @@ public class ContextActivity extends AppCompatActivity {
         startService(new Intent(this,ContextService.class));
     }
 
-    // 使用 Application 创建 Dialog
+
     public void showDialog(View view){
-        Dialog dialog = new Dialog(getApplicationContext());
-        dialog.show();
+       sendBroadcast(new Intent("luyao.context"));
     }
 }
