@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="luyao.android">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Android"
+        tools:targetApi="31">
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.task.TaskActivity" />
+        <activity
+            android:name=".ui.task.StandTaskActivity1"
+            android:launchMode="standard" />
+        <activity android:name=".ui.task.StandTaskActivity2"
+            android:launchMode="standard"/>
+        <activity
+            android:name=".ui.task.StandardAndTaskAffinityActivity"
+            android:launchMode="standard"
+            android:taskAffinity="luyao.android.standard" />
+        <activity
+            android:name=".ui.task.SingleTaskActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".ui.task.SingleTaskAndTaskAffinityActivityX"
+            android:launchMode="singleTask"
+            android:taskAffinity="luyao.android.singleTask" />
+        <activity
+            android:name=".ui.task.SingleTaskAndTaskAffinityActivityY"
+            android:launchMode="singleTask"
+            android:taskAffinity="luyao.android.singleTask" />
+        <activity
+            android:name=".ui.task.SingleInstanceActivity"
+            android:launchMode="singleInstance" />
+        <activity
+            android:name=".ui.task.SingleInstancePerTaskActivity"
+            android:launchMode="singleInstancePerTask" />
+        <activity
+            android:name=".ui.task.SingleTopActivity"
+            android:launchMode="singleTop" />
+        <activity android:name=".ui.task.SingleTopAndTaskAffinityActivity"
+            android:launchMode="singleTop"
+            android:taskAffinity="luyao.android.singleTop"/>
+
+
+    </application>
+
+</manifest>

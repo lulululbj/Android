@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/taskTv"
+        style="@style/NormalText"
+        android:layout_marginStart="10dp"
+        android:textColor="@color/red"
+        tools:text="Task1" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/activityTv"
+        style="@style/NormalText"
+        android:layout_marginStart="10dp"
+        android:textColor="@color/red"
+        tools:text="Activity1" />
+
+    <androidx.appcompat.widget.AppCompatCheckBox
+        android:id="@+id/newTaskCb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="FLAG_ACTIVITY_NEW_TASK"
+        android:layout_marginStart="10dp"/>
+
+    <androidx.appcompat.widget.AppCompatCheckBox
+        android:id="@+id/singleTopCb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="FLAG_ACTIVITY_SINGLE_TOP"
+        android:layout_marginStart="10dp"/>
+
+    <androidx.appcompat.widget.AppCompatCheckBox
+        android:id="@+id/clearTopCb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="FLAG_ACTIVITY_CLEAR_TOP"
+        android:layout_marginStart="10dp"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/standard1"
+        style="@style/NormalButton"
+        android:text="跳转 standard1"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/standard2"
+        style="@style/NormalButton"
+        android:text="跳转 standard2"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/standardAndTaskAffinity"
+        style="@style/NormalButton"
+        android:text="跳转 standard + taskAffinity"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/singleTask"
+        style="@style/NormalButton"
+        android:text="跳转 singleTask"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/singleTaskAndTaskAffinityX"
+        style="@style/NormalButton"
+        android:text="跳转 singleTask + taskAffinity X"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/singleTaskAndTaskAffinityY"
+        style="@style/NormalButton"
+        android:text="跳转 singleTask + taskAffinity Y"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/singleTop"
+        style="@style/NormalButton"
+        android:text="跳转 singleTop"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/singleTopAndTaskAffinity"
+        style="@style/NormalButton"
+        android:text="跳转 singleTop + taskAffinity"/>
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/singleInstance"
+        style="@style/NormalButton"
+        android:text="跳转 singleInstance"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/singleInstancePerTask"
+        style="@style/NormalButton"
+        android:text="跳转 singleInstancePerTask"/>
+
+</LinearLayout>
