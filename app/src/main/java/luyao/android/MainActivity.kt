@@ -30,4 +30,14 @@ class MainActivity : AppCompatActivity() {
         binding.menuRv.adapter = menuAdapter
         menuAdapter.submitList(menuList)
     }
+
+    override fun onResume() {
+        super.onResume()
+        binding.taskId.text = "Task $taskId\n${getClassName()}"
+    }
+
+    private fun getClassName(): String {
+        val name = this.toString()
+        return name.substring(name.lastIndexOf(".") + 1)
+    }
 }

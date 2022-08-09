@@ -16,6 +16,10 @@ open class TaskActivity : BaseActivity() {
 
     private val binding: ActivityTaskBinding by viewbind()
 
+    override fun onResume() {
+        super.onResume()
+        initView()
+    }
     @SuppressLint("SetTextI18n")
     override fun initView() {
         title = javaClass.simpleName
