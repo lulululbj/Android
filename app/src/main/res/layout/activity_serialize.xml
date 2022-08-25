@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/serializeTv"
+        style="@style/NormalText" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/serializableToMemory"
+        style="@style/NormalButton"
+        android:text="Serializable 到内存"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/parcelableToMemory"
+        style="@style/NormalButton"
+        android:text="Parcelable 到内存"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/serializableToFile"
+        style="@style/NormalButton"
+        android:text="Serializable 到文件"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/parcelableToFile"
+        style="@style/NormalButton"
+        android:text="Parcelable 到文件"/>
+
+</LinearLayout>

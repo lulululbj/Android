@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/result"
+        style="@style/NormalText" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/bindService"
+        style="@style/NormalButton"
+        android:text="绑定远程服务"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/getRemotePid"
+        style="@style/NormalButton"
+        android:text="获取远程服务 PID"/>
+
+</LinearLayout>

@@ -3,6 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="luyao.android">
 
+    <queries >
+        <package android:name="luyao.android2"/>
+    </queries>
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -67,6 +70,8 @@
         <activity android:name=".ui.task.SingleTopAndTaskAffinityActivity"
             android:launchMode="singleTop"
             android:taskAffinity="luyao.android.singleTop"/>
+        <activity android:name=".ui.SerializeActivity" />
+        <activity android:name=".ui.AidlActivity" />
 
 
     </application>
