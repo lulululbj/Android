@@ -72,6 +72,7 @@
             android:taskAffinity="luyao.android.singleTop"/>
         <activity android:name=".ui.SerializeActivity" />
         <activity android:name=".ui.AidlActivity" />
+        <activity android:name=".ui.biometric.BiometricActivity" />
 
 
     </application>
