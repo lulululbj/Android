@@ -5,8 +5,6 @@ import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.biometric.BiometricManager
-import androidx.biometric.BiometricManager.Authenticators.BIOMETRIC_STRONG
-import androidx.biometric.BiometricManager.Authenticators.BIOMETRIC_WEAK
 import androidx.biometric.BiometricPrompt
 import androidx.core.content.ContextCompat
 import com.google.android.material.snackbar.Snackbar
@@ -24,6 +22,7 @@ class BiometricActivity : AppCompatActivity() {
     private val binding: ActivityBiometricBinding by viewbind()
 
     private lateinit var biometricPrompt: BiometricPrompt
+    private val biometricHelper by lazy { BiometricHelper(this) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,9 +32,9 @@ class BiometricActivity : AppCompatActivity() {
 
     private fun initView() {
         binding.run {
+            biometricSupport.text = "Support ${biometricHelper.getBiometricType()}"
             biometric.setOnClickListener {
-                if (BiometricManager.from(this@BiometricActivity)
-                        .canAuthenticate() == BiometricManager.BIOMETRIC_SUCCESS
+                if (biometricHelper.biometricEnable()
                 ) {
                     biometricPrompt.authenticate(createPromptInfo())
                 } else {

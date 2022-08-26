@@ -4,6 +4,10 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/biometricSupport"
+        style="@style/NormalText"/>
+
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/biometric"
         style="@style/NormalButton"
