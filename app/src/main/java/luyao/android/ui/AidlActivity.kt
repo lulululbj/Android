@@ -1,6 +1,5 @@
 package luyao.android.ui
 
-import android.animation.ObjectAnimator
 import android.content.ComponentName
 import android.content.Context
 import android.content.Intent
@@ -8,11 +7,9 @@ import android.content.ServiceConnection
 import android.os.Bundle
 import android.os.IBinder
 import android.os.Process
-import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.hi.dhl.binding.viewbind
 import luyao.android.IRemoteService
-import luyao.android.R
 import luyao.android.databinding.ActivityAidlBinding
 
 /**

@@ -1,0 +1,26 @@
+apply plugin: 'groovy'
+apply plugin: 'kotlin'
+apply plugin: 'java-gradle-plugin'
+apply plugin: 'maven-publish'
+
+dependencies {
+    implementation gradleApi()
+    implementation localGroovy()
+    api "com.android.tools.build:gradle-api:7.0.4"
+    api "com.android.tools.build:gradle:7.0.4"
+    implementation "org.jetbrains.kotlin:kotlin-gradle-plugin:1.7.10"
+}
+
+gradlePlugin {
+    plugins {
+        version {
+            id = 'testPlugin'
+            implementationClass = 'luyao.android.plugin.TestPlugin'
+        }
+    }
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_11
+    targetCompatibility = JavaVersion.VERSION_11
+}
