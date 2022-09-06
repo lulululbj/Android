@@ -14,8 +14,8 @@ dependencies {
 gradlePlugin {
     plugins {
         version {
-            id = 'testPlugin'
-            implementationClass = 'luyao.android.plugin.TestPlugin'
+            id = 'permissionCheck'
+            implementationClass = 'luyao.android.plugin.PermissionCheck'
         }
     }
 }

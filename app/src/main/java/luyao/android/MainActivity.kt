@@ -2,6 +2,7 @@ package luyao.android
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import luyao.android.adapter.MenuAdapter
 import luyao.android.databinding.ActivityMainBinding
@@ -41,9 +42,10 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
         binding.menuRv.adapter = menuAdapter
         menuAdapter.submitList(menuList)
+
+        Log.e("tag",packageManager.getPackageInfo(packageName,0).versionCode.toString())
     }
 
     override fun onResume() {

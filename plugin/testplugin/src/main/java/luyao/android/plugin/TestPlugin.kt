@@ -10,7 +10,7 @@ import org.gradle.api.Project
  */
 class TestPlugin : Plugin<Project> {
 
-    override fun apply(p0: Project) {
+    override fun apply(project: Project) {
         println("test plugin")
     }
 }

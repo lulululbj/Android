@@ -7,3 +7,4 @@
 //}
 rootProject.name = "plugin"
 include ':testPlugin'
+include ':permissionCheck'
