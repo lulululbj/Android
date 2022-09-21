@@ -8,3 +8,5 @@
 rootProject.name = "plugin"
 include ':testPlugin'
 include ':permissionCheck'
+include ':uploadPlugin'
+include ':modulePlugin'

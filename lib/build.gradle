@@ -1,6 +1,13 @@
 plugins {
     id 'com.android.library'
     id 'org.jetbrains.kotlin.android'
+    id 'uploadMaven'
+}
+
+upload {
+    groupId = "luyao.plugin"
+    artifactId = "lib1"
+    version = "0.0.1"
 }
 
 android {

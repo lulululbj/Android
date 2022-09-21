@@ -13,8 +13,24 @@
 //        maven { url 'https://jitpack.io' }
 //    }
 //}
+buildscript {
+    repositories {
+        maven {
+            url "./LocalRepo"
+        }
+        google()
+        mavenCentral()
+        maven { url 'https://jitpack.io' }
+    }
+
+    dependencies {
+        classpath 'luyao.plugin:modulePlugin:0.0.1'
+    }
+}
 rootProject.name = "Android"
 include ':app'
 include ':app2'
-includeBuild("./plugin")
 include ':lib'
+includeBuild("./plugin")
+
+apply plugin: 'moduleSettingPlugin'

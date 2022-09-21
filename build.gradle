@@ -1,6 +1,10 @@
 buildscript {
     ext.kotlin_version = '1.7.10'
     repositories {
+        def mavenLocalPath = project.rootDir.path +"/LocalRepo"
+        maven {
+            url mavenLocalPath
+        }
         google()
         mavenCentral()
         mavenLocal()
@@ -16,10 +20,16 @@ buildscript {
 plugins {
     id "testPlugin" apply false
     id "permissionCheck" apply false
+    id "uploadMaven" apply false
+    id "modulePlugin" apply false
 }
 
 allprojects {
     repositories {
+        def mavenLocalPath = project.rootDir.path +"/LocalRepo"
+        maven {
+            url mavenLocalPath
+        }
         maven {
             url 'https://maven.aliyun.com/repository/central/'
         }

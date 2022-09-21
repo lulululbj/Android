@@ -3,6 +3,7 @@ package luyao.android.plugin
 import com.android.build.api.variant.AndroidComponentsExtension
 import org.gradle.api.Plugin
 import org.gradle.api.Project
+import org.gradle.api.internal.component.ArtifactType
 import java.io.File
 
 /**

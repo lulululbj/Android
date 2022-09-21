@@ -1,0 +1,97 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "luyao.plugin",
+    "module": "lib1",
+    "version": "0.0.1",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "7.0.2"
+    }
+  },
+  "variants": [
+    {
+      "name": "releaseApiPublication",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.libraryelements": "aar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-jdk8",
+          "version": {
+            "requires": "1.7.10"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "lib1-0.0.1.aar",
+          "url": "lib1-0.0.1.aar",
+          "size": 1295,
+          "sha512": "79199b33e785cfb83d25af2e737a3527006f0bda68d29ca1bac9c9bf012db1899a34c4ddf3ebe033adc5071c46d5af0e5d58a79fe612912bbc0db85dc05392b3",
+          "sha256": "df85747bb4f64b3953f46f8d238044f7e8cd0d26b44b25aedb576a4d900d4a2c",
+          "sha1": "3f06d76618ab5df722bac01b6bd3ec6bcde90fb6",
+          "md5": "9a3c1646d93e2ca9ab311380ee277727"
+        }
+      ]
+    },
+    {
+      "name": "releaseRuntimePublication",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.libraryelements": "aar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-jdk8",
+          "version": {
+            "requires": "1.7.10"
+          }
+        },
+        {
+          "group": "androidx.core",
+          "module": "core-ktx",
+          "version": {
+            "requires": "1.7.0"
+          }
+        },
+        {
+          "group": "androidx.appcompat",
+          "module": "appcompat",
+          "version": {
+            "requires": "1.5.0"
+          }
+        },
+        {
+          "group": "com.google.android.material",
+          "module": "material",
+          "version": {
+            "requires": "1.6.1"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "lib1-0.0.1.aar",
+          "url": "lib1-0.0.1.aar",
+          "size": 1295,
+          "sha512": "79199b33e785cfb83d25af2e737a3527006f0bda68d29ca1bac9c9bf012db1899a34c4ddf3ebe033adc5071c46d5af0e5d58a79fe612912bbc0db85dc05392b3",
+          "sha256": "df85747bb4f64b3953f46f8d238044f7e8cd0d26b44b25aedb576a4d900d4a2c",
+          "sha1": "3f06d76618ab5df722bac01b6bd3ec6bcde90fb6",
+          "md5": "9a3c1646d93e2ca9ab311380ee277727"
+        }
+      ]
+    }
+  ]
+}
