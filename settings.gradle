@@ -23,9 +23,9 @@ buildscript {
         maven { url 'https://jitpack.io' }
     }
 
-    dependencies {
-        classpath 'luyao.plugin:modulePlugin:0.0.1'
-    }
+//    dependencies {
+//        classpath 'luyao.plugin:modulePlugin:0.0.1'
+//    }
 }
 rootProject.name = "Android"
 include ':app'
@@ -33,4 +33,4 @@ include ':app2'
 include ':lib'
 includeBuild("./plugin")
 
-apply plugin: 'moduleSettingPlugin'
+//apply plugin: 'moduleSettingPlugin'

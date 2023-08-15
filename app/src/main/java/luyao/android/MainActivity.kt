@@ -44,7 +44,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
         binding.menuRv.adapter = menuAdapter
         menuAdapter.submitList(menuList)
-
+        println("Find it!")
         Log.e("tag",packageManager.getPackageInfo(packageName,0).versionCode.toString())
     }
 

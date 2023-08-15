@@ -41,7 +41,8 @@ abstract class BaseUploadPlugin : Plugin<Project> {
                 return@afterEvaluate
             }
 
-            val localRepo = project.file("../LocalRepo")
+            val localRepoPath = uploadConfig.localRepo.ifEmpty { "../LocalRepo" }
+            val localRepo = project.file(localRepoPath)
             var mavenUrl = ""
 
             val publishingExtension = Util.publishingExtension(project)

@@ -5,6 +5,7 @@ import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.jetbrains.kotlin.gradle.utils.`is`
 import java.io.File
+import java.util.*
 
 /**
  * Description:
@@ -14,16 +15,26 @@ import java.io.File
 class ModulePlugin : Plugin<Project> {
 
     override fun apply(project: Project) {
-        if (isEnabled(project)) {
-            println("ModulePlugin 已关闭")
+        val properties = Properties()
+        val propertiesFile = File(project.rootDir, "gradle.properties")
+        println(propertiesFile.path)
+        properties.load(propertiesFile.inputStream())
+
+        val isEnabled = properties.getOrDefault(GAV_ENABLE, false).toString().toBoolean()
+        if (!isEnabled) {
+            println("Gav2project disabled")
             return
         }
 
-        val aarModules = getAarModules(project)
+        val aarModules =
+            properties.getProperty(GAV_AAR_MODULES)?.toString()?.split(",") ?: arrayListOf()
         project.afterEvaluate {
             val gavMap = hashMapOf<String, Project>()
             project.rootProject.allprojects {
-                val buildFile = File(it.projectDir, "build.gradle")
+                var buildFile = File(it.projectDir, "build.gradle")
+                if (!buildFile.exists()) {
+                    buildFile = File(it.projectDir, "build.gradle.kts")
+                }
                 if (!buildFile.exists()) return@allprojects
                 val gav = getGAV(buildFile.readText())
                 if (gav != null) {
@@ -62,9 +73,9 @@ class ModulePlugin : Plugin<Project> {
                                 project.logger.info("保持使用依赖: ${configuration.name} ${it.group}:${it.name}:${it.version}")
                             } else {
                                 if (p != null && !dependency.group.isNullOrEmpty() && !dependency.name.isNullOrEmpty()) {
-                                    val excludeMap = hashMapOf<String,String>().apply {
-                                        put("group",dependency.group!!)
-                                        put("module",dependency.name)
+                                    val excludeMap = hashMapOf<String, String>().apply {
+                                        put("group", dependency.group!!)
+                                        put("module", dependency.name)
                                     }
                                     configuration.exclude(excludeMap)
                                     project.logger.info("排除依赖:${configuration.name} ${it.group}:${it.name}:${it.version}")

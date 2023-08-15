@@ -32,7 +32,14 @@ afterEvaluate {
                 from components.java
                 groupId = "luyao.plugin"
                 artifactId = "uploadPlugin"
-                version = "0.0.1"
+                version = "0.0.2"
+            }
+        }
+
+        repositories {
+            maven {
+                allowInsecureProtocol(true)
+                url = "/Users/luyao/Program/Repo"
             }
         }
     }

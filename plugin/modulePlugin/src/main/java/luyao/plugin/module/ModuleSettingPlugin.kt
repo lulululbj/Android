@@ -29,6 +29,11 @@ class ModuleSettingPlugin : Plugin<Settings> {
 
         if (aarModules.isNullOrEmpty()) return
 
+        try {
+
+        } catch (e: Exception) {
+            println(e.message)
+        }
         settings.rootProject.children.run {
             forEach {
                 if (aarModules.contains(it.name)) {
@@ -39,7 +44,9 @@ class ModuleSettingPlugin : Plugin<Settings> {
                 }
             }
             clear()
+            println("clear")
             addAll(newChildren)
+            println("addAll")
         }
     }
 }

@@ -1,0 +1,138 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "luyao.android.plugin",
+    "module": "findPlugin",
+    "version": "0.0.1",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "7.0.2"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.jvm.version": 11,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "com.android.tools.build",
+          "module": "gradle-api",
+          "version": {
+            "requires": "7.0.4"
+          }
+        },
+        {
+          "group": "com.android.tools.build",
+          "module": "gradle",
+          "version": {
+            "requires": "7.4.1"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-jdk8",
+          "version": {
+            "requires": "1.7.10"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "findPlugin-0.0.1.jar",
+          "url": "findPlugin-0.0.1.jar",
+          "size": 19344,
+          "sha512": "4832e30d10491da5f4b5529ae7392aa0844e3e4b30452a8ed052d7da7370539460eaec9a972253d107a64600d0c0c2d2cc03dbbefca5e37a8c3358635981f4db",
+          "sha256": "424c012554027a3c43aa2157dd417dfe20e2befc29eebed20bc688d4aab01493",
+          "sha1": "171db7ecb1981aeb17ac41341805e8f7d184057f",
+          "md5": "d9433c90a122dc6b297de8b5df8863ad"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.jvm.version": 11,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-gradle-plugin",
+          "version": {
+            "requires": "1.7.10"
+          }
+        },
+        {
+          "group": "org.ow2.asm",
+          "module": "asm",
+          "version": {
+            "requires": "9.4"
+          }
+        },
+        {
+          "group": "org.ow2.asm",
+          "module": "asm-util",
+          "version": {
+            "requires": "9.4"
+          }
+        },
+        {
+          "group": "org.ow2.asm",
+          "module": "asm-commons",
+          "version": {
+            "requires": "9.4"
+          }
+        },
+        {
+          "group": "com.android.tools.build",
+          "module": "gradle-api",
+          "version": {
+            "requires": "7.0.4"
+          }
+        },
+        {
+          "group": "com.android.tools.build",
+          "module": "gradle",
+          "version": {
+            "requires": "7.4.1"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-jdk8",
+          "version": {
+            "requires": "1.7.10"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "findPlugin-0.0.1.jar",
+          "url": "findPlugin-0.0.1.jar",
+          "size": 19344,
+          "sha512": "4832e30d10491da5f4b5529ae7392aa0844e3e4b30452a8ed052d7da7370539460eaec9a972253d107a64600d0c0c2d2cc03dbbefca5e37a8c3358635981f4db",
+          "sha256": "424c012554027a3c43aa2157dd417dfe20e2befc29eebed20bc688d4aab01493",
+          "sha1": "171db7ecb1981aeb17ac41341805e8f7d184057f",
+          "md5": "d9433c90a122dc6b297de8b5df8863ad"
+        }
+      ]
+    }
+  ]
+}

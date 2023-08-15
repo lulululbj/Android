@@ -36,14 +36,14 @@ afterEvaluate {
                 from components.java
                 groupId = "luyao.plugin"
                 artifactId = "modulePlugin"
-                version = "0.0.1"
+                version = "0.0.6"
             }
         }
 
         repositories {
             maven {
                 allowInsecureProtocol(true)
-                url = "../../LocalRepo"
+                url = "/Users/luyao/Program/Repo"
             }
         }
     }

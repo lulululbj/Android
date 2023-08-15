@@ -3,7 +3,12 @@ plugins {
     id 'org.jetbrains.kotlin.android'
 //    id 'testPlugin'
     id 'permissionCheck'
-    id 'modulePlugin'
+//    id 'modulePlugin'
+    id 'findPlugin'
+}
+
+findMethod {
+    packages = ["java.io.PrintStream", "java.lang.System"]
 }
 
 android {
