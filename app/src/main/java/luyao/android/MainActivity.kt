@@ -10,6 +10,7 @@ import luyao.android.model.Menu
 import luyao.android.model.SerializableBean
 import luyao.android.ui.AidlActivity
 import luyao.android.ui.SerializeActivity
+import luyao.android.ui.TouchDelegateActivity
 import luyao.android.ui.biometric.BiometricActivity
 import luyao.android.ui.task.TaskActivity
 
@@ -36,6 +37,7 @@ class MainActivity : AppCompatActivity() {
         Menu("序列化", SerializeActivity::class.java),
         Menu("AIDL", AidlActivity::class.java),
         Menu("生物认证", BiometricActivity::class.java),
+        Menu("TouchDelegate", TouchDelegateActivity::class.java),
     )
 
     override fun onCreate(savedInstanceState: Bundle?) {

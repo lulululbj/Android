@@ -29,6 +29,7 @@ object MethodFindUtils {
     ) {
         val isHit = packages.any { invokeClassName.contains(it) }
         if (!isHit) return
+        println("Find $currentMethod")
         if (results[buildType] == null) results[buildType] = mutableListOf()
         val d = HitMethod(currentClass, currentMethod, invokeClassName, invokeMethod)
         results[buildType]?.add(d)
@@ -36,7 +37,7 @@ object MethodFindUtils {
 
     fun end(type: String) {
         if (!results.containsKey(type)) return
-        println("--------findPlugin-$type-start----->")
+        println("<--------findPlugin-$type-start----->")
         println("--> rules [packages]:")
         packages.forEach {
             println("package: [$it]")
