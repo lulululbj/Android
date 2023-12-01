@@ -2,6 +2,7 @@ package luyao.android
 
 import android.content.Intent
 import android.os.Bundle
+import android.os.PersistableBundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import luyao.android.adapter.MenuAdapter
@@ -47,7 +48,7 @@ class MainActivity : AppCompatActivity() {
         binding.menuRv.adapter = menuAdapter
         menuAdapter.submitList(menuList)
         println("Find it!")
-        Log.e("tag",packageManager.getPackageInfo(packageName,0).versionCode.toString())
+        Log.e("tag", packageManager.getPackageInfo(packageName, 0).versionCode.toString())
     }
 
     override fun onResume() {
@@ -58,5 +59,19 @@ class MainActivity : AppCompatActivity() {
     private fun getClassName(): String {
         val name = this.toString()
         return name.substring(name.lastIndexOf(".") + 1)
+    }
+
+
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        val byteArray = ByteArray(1024 * 1024 * 16)
+        outState.putByteArray("key", byteArray)
+        Log.e("bundle", "onSaveInstanceState byte size: ${byteArray.size}")
+    }
+
+    override fun onRestoreInstanceState(savedInstanceState: Bundle) {
+        super.onRestoreInstanceState(savedInstanceState)
+        val byteArray = savedInstanceState.getByteArray("key")
+        Log.e("bundle", "onRestoreInstanceState byte size: ${byteArray?.size}")
     }
 }
