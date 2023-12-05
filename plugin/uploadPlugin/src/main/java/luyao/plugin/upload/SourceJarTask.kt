@@ -19,8 +19,8 @@ fun Project.androidSourcesJar(): Task {
             it.java.srcDirs
         }.toSet()
 
-        it.classifier = "sources"
-        it.version = ""
+        it.archiveClassifier.set("sources")
+        it.archiveVersion.set("")
         it.from(set)
     }
 }
@@ -35,8 +35,8 @@ fun Project.javaSourcesJar(): Task {
             it.java.srcDirs
         }.toSet()
 
-        it.classifier = "sources"
-        it.version = ""
+        it.archiveClassifier.set("sources")
+        it.archiveVersion.set("")
         it.from(set)
     }
 }
